@@ -1,0 +1,130 @@
+{
+  "expo": {
+    "name": "체크리스트 앱",
+    "slug": "checklist-app",
+    "version": "1.0.0",
+    "sdkVersion": "54.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "checklistappfrontend",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.checklistapp",
+      "statusBarStyle": "light",
+      "requireFullScreen": false,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSAllowsArbitraryLoadsInWebContent": true,
+          "NSAllowsLocalNetworking": true,
+          "NSExceptionDomains": {
+            "192.168.0.14": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0",
+              "NSIncludesSubdomains": true,
+              "NSRequiresCertificateTransparency": false
+            },
+            "127.0.0.1": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0"
+            },
+            "10.0.2.2": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0"
+            }
+          }
+        },
+        "NSCameraUsageDescription": "체크리스트 앱에서 장비 사진 촬영을 위해 카메라 권한이 필요합니다.",
+        "NSLocationWhenInUseUsageDescription": "체크리스트 앱에서 위치 추적을 위해 위치 권한이 필요합니다.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "체크리스트 앱에서 위치 추적을 위해 위치 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "체크리스트 앱에서 장비 사진을 저장하기 위해 사진 라이브러리 접근 권한이 필요합니다.",
+        "NSMicrophoneUsageDescription": "체크리스트 앱에서 음성 메모를 위해 마이크 권한이 필요합니다.",
+        "NSContactsUsageDescription": "체크리스트 공유를 위해 연락처 권한이 필요합니다.",
+        "NSFaceIDUsageDescription": "체크리스트 앱에서 Face ID 로그인을 위해 얼굴 인식 권한이 필요합니다.",
+        "NSBiometricUsageDescription": "체크리스트 앱에서 생체 인증 로그인을 위해 생체 정보 사용 권한이 필요합니다."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "statusBar": {
+        "barStyle": "light-content",
+        "backgroundColor": "#3498db",
+        "translucent": false
+      },
+      "navigationBar": {
+        "backgroundColor": "#ffffff",
+        "barStyle": "dark-content"
+      },
+      "softwareKeyboardLayoutMode": "pan",
+      "usesCleartextTraffic": true,
+      "allowBackup": false,
+      "package": "com.yourcompany.checklistapp",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.USE_BIOMETRIC"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "앱에서 장비 사진을 촬영하기 위해 사진 권한이 필요합니다.",
+          "cameraPermission": "앱에서 장비를 인식하기 위해 카메라 권한이 필요합니다."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "앱에서 장비 대여 위치를 추적하기 위해 위치 권한이 필요합니다.",
+          "locationAlwaysPermission": "앱에서 장비 대여 위치를 추적하기 위해 위치 권한이 필요합니다.",
+          "locationWhenInUsePermission": "앱에서 장비 대여 위치를 추적하기 위해 위치 권한이 필요합니다."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "체크리스트 앱에서 Face ID 로그인을 위해 얼굴 인식 권한이 필요합니다."
+        }
+      ],
+      "expo-secure-store",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

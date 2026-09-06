@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+
+# AI 모델 파일 (크기가 큰 경우)
+*.pt
+*.pth
+*.onnx
+
+# 업로드된 파일
+uploads/
+logs/
+
+# IDE 설정
+.vscode/
+.idea/

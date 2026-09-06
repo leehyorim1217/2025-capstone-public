@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.git
+.env
+logs
+*.log
+uploads
+verification
+profiles
+biometric
+.DS_Store
